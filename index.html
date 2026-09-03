@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coco Doula</title>
+<meta name="description" content="Birth doula in Austin, Texas. Steady, unhurried support through pregnancy, birth, and the first weeks at home.">
+<link rel="canonical" href="https://cocodoula.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cocodoula.com/">
+<meta property="og:title" content="Coco Doula">
+<meta property="og:description" content="Birth doula in Austin, Texas. Steady, unhurried support through pregnancy, birth, and the first weeks at home.">
+<meta property="og:image" content="https://cocodoula.com/assets/coco.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&family=Karla:ital,wght@0,300..600;1,400&display=swap">
+<style>
+:root{
+  --linen:#F7F2EA;
+  --sand:#EDE2D2;
+  --tan:#D6BE9E;
+  --bark:#3B322B;
+  --bark-soft:#6B5D51;
+  --olive:#6F7355;
+  --olive-lift:#9BA07C;
+  --cream:#FBF8F3;
+  --measure:62ch;
+  --edge:clamp(1.25rem,5vw,4.5rem);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--linen);
+  color:var(--bark);
+  font-family:"Karla","Helvetica Neue",Arial,sans-serif;
+  font-size:1.0625rem;
+  line-height:1.72;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+h1,h2,h3{
+  font-family:"Fraunces",Georgia,"Times New Roman",serif;
+  font-variation-settings:"SOFT" 45,"WONK" 1,"opsz" 120;
+  font-weight:300;
+  line-height:1.06;
+  letter-spacing:-0.015em;
+  text-wrap:balance;
+  margin:0;
+}
+p{margin:0}
+a{color:inherit}
+
+.eyebrow{
+  font-size:.72rem;
+  letter-spacing:.19em;
+  text-transform:uppercase;
+  font-weight:600;
+  color:var(--olive);
+}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:var(--edge)}
+
+/* ---------- nav ---------- */
+.nav{
+  position:relative;z-index:3;
+  display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+  padding-block:1.75rem 0;
+}
+.mark{
+  font-family:"Fraunces",Georgia,serif;
+  font-variation-settings:"SOFT" 60,"WONK" 1,"opsz" 40;
+  font-size:1.45rem;font-weight:400;letter-spacing:-.01em;
+  text-decoration:none;
+}
+.mark em{font-style:italic;color:var(--olive)}
+.nav-link{
+  font-family:inherit;background:none;border:0;padding:0 0 .35rem;cursor:pointer;
+  font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+  color:var(--bark);text-decoration:none;
+  border-bottom:1px solid var(--tan);
+  transition:border-color .25s ease,color .25s ease;
+}
+.nav-link:hover,.nav-link:focus-visible{color:var(--olive);border-color:var(--olive)}
+
+/* ---------- hero ---------- */
+.hero{
+  display:grid;
+  grid-template-columns:1.02fr .98fr;
+  gap:clamp(2rem,5vw,4.5rem);
+  align-items:end;
+  padding-block:clamp(3rem,9vw,7rem) clamp(3.5rem,8vw,6.5rem);
+}
+.hero-copy{display:flex;flex-direction:column;gap:1.6rem;padding-bottom:clamp(0rem,2vw,2rem)}
+.hero h1{font-size:clamp(2.9rem,7.4vw,5.3rem)}
+.hero h1 em{
+  font-style:italic;
+  font-variation-settings:"SOFT" 80,"WONK" 1,"opsz" 144;
+  color:var(--olive);
+}
+.lede{max-width:34ch;color:var(--bark-soft);font-size:clamp(1.05rem,1.6vw,1.18rem)}
+.hero-actions{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;margin-top:.4rem}
+
+.btn{
+  display:inline-block;
+  font-family:inherit;font-size:.8rem;font-weight:600;
+  letter-spacing:.15em;text-transform:uppercase;
+  padding:1.05rem 2rem;border:0;border-radius:999px;cursor:pointer;
+  background:var(--bark);color:var(--cream);text-decoration:none;
+  transition:background .25s ease,transform .25s ease;
+}
+.btn:hover,.btn:focus-visible{background:var(--olive);transform:translateY(-1px)}
+.btn-light{background:var(--olive);color:var(--cream)}
+.btn-light:hover,.btn-light:focus-visible{background:var(--olive-lift);color:var(--bark)}
+
+/* photo frame */
+.photo{
+  position:relative;margin:0;
+  aspect-ratio:3/4.1;
+  border-radius:190px 190px 14px 14px;
+  overflow:hidden;
+  background:
+    radial-gradient(120% 70% at 62% 22%, rgba(255,241,214,.95) 0%, rgba(244,228,203,0) 58%),
+    linear-gradient(180deg,#E7E1D8 0%,#DED8CF 34%,#CFC9BE 44%,#C8BDA9 52%,#CDB795 63%,#C2A886 78%,#B79C7A 100%);
+  box-shadow:0 30px 60px -40px rgba(59,50,43,.5);
+}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 26%}
+.photo::after{
+  content:"";position:absolute;inset:0;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.35);
+  border-radius:inherit;pointer-events:none;
+}
+.photo-hint{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  text-align:center;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(59,50,43,.42);font-weight:600;line-height:2;
+}
+.photo.has-image .photo-hint{display:none}
+
+/* ---------- rule ---------- */
+.rule{height:1px;background:var(--tan);border:0;margin:0}
+
+/* ---------- about ---------- */
+.about{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.55fr);
+  gap:clamp(1.5rem,5vw,4.5rem);
+  padding-block:clamp(3.5rem,8vw,6rem);
+}
+.about-body{display:flex;flex-direction:column;gap:1.5rem;max-width:var(--measure)}
+.about h2{font-size:clamp(1.85rem,3.4vw,2.6rem)}
+.about p{color:var(--bark-soft)}
+.about p strong{color:var(--bark);font-weight:600}
+.signature{
+  font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:300;
+  font-variation-settings:"SOFT" 90,"WONK" 1,"opsz" 100;
+  font-size:1.7rem;color:var(--olive);margin-top:.25rem;
+}
+
+/* ---------- care phases ---------- */
+.care{background:var(--sand);padding-block:clamp(3.25rem,7vw,5.5rem)}
+.care-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.75rem,4vw,3.5rem);margin-top:2.75rem}
+.phase{display:flex;flex-direction:column;gap:.9rem;padding-top:1.25rem;border-top:1px solid var(--tan)}
+.phase h3{font-size:1.35rem;font-variation-settings:"SOFT" 45,"WONK" 0,"opsz" 30}
+.phase p{font-size:.97rem;color:var(--bark-soft);line-height:1.65}
+
+/* ---------- closing band ---------- */
+.book{background:var(--bark);color:var(--cream);padding-block:clamp(3.5rem,8vw,5.5rem)}
+.book-inner{display:flex;flex-direction:column;align-items:flex-start;gap:1.25rem;max-width:38ch}
+.book h2{font-size:clamp(2rem,4vw,3rem);color:var(--cream)}
+.book .eyebrow{color:var(--olive-lift)}
+.book p{color:#CFC2B2}
+.book .btn{margin-top:.6rem}
+
+/* ---------- modal ---------- */
+dialog.modal{
+  border:0;padding:0;background:transparent;
+  width:min(540px,92vw);max-width:none;
+  color:var(--cream);overflow:visible;
+}
+dialog.modal::backdrop{background:rgba(38,32,27,.62)}
+.modal-card{
+  position:relative;
+  background:var(--bark);
+  border-radius:22px;
+  padding:clamp(1.75rem,4vw,2.75rem);
+  display:flex;flex-direction:column;gap:1.5rem;
+  box-shadow:0 50px 90px -45px rgba(0,0,0,.75);
+  max-height:88vh;overflow-y:auto;
+}
+.modal-head{display:flex;flex-direction:column;gap:.75rem;padding-right:2.5rem}
+.modal-head h2{font-size:clamp(1.7rem,3.6vw,2.2rem);color:var(--cream)}
+.modal-head .eyebrow{color:var(--olive-lift)}
+.modal-head p{color:#CFC2B2;font-size:.97rem;line-height:1.6}
+.modal-close{
+  position:absolute;top:1.1rem;right:1.1rem;
+  width:2.25rem;height:2.25rem;border-radius:999px;
+  background:transparent;border:1px solid #5C5045;color:#CFC2B2;
+  font-size:1.05rem;line-height:1;cursor:pointer;
+  display:grid;place-items:center;
+  transition:border-color .2s ease,color .2s ease,background .2s ease;
+}
+.modal-close:hover,.modal-close:focus-visible{border-color:var(--olive-lift);color:var(--cream);background:rgba(155,160,124,.12)}
+
+form{display:grid;gap:1.15rem}
+.field{display:flex;flex-direction:column;gap:.5rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1.15rem}
+label{
+  font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+  color:var(--olive-lift);
+}
+input{
+  font-family:inherit;font-size:1rem;color:var(--cream);
+  background:transparent;border:0;border-bottom:1px solid #5C5045;
+  padding:.7rem .1rem;border-radius:0;
+  transition:border-color .25s ease;
+}
+input::placeholder{color:#8A7C6E}
+input:hover{border-color:#7A6D60}
+input:focus{outline:none;border-color:var(--olive-lift)}
+input:focus-visible{outline:2px solid var(--olive-lift);outline-offset:4px}
+input[type="date"]{color-scheme:dark}
+.consent{font-size:.83rem;color:#A2958A;line-height:1.55;margin-top:.35rem}
+form .btn{justify-self:start;margin-top:.5rem}
+
+.sent{display:none;flex-direction:column;gap:.9rem;padding-block:.5rem}
+.sent h3{font-size:1.7rem;color:var(--cream)}
+.sent p{color:#CFC2B2}
+.is-sent form,.is-sent .modal-head{display:none}
+.is-sent .sent{display:flex}
+
+/* ---------- footer ---------- */
+footer{padding-block:2.5rem 3rem;display:flex;justify-content:center;align-items:baseline;gap:1rem;flex-wrap:wrap;text-align:center}
+footer a{text-decoration:none;border-bottom:1px solid var(--tan);padding-bottom:2px;transition:border-color .25s ease,color .25s ease}
+footer a:hover,footer a:focus-visible{color:var(--olive);border-color:var(--olive)}
+.fine{font-size:.82rem;color:var(--bark-soft);letter-spacing:.03em}
+
+/* ---------- motion ---------- */
+.reveal{opacity:0;transform:translateY(14px);animation:rise .9s cubic-bezier(.22,.7,.3,1) forwards}
+.reveal:nth-child(1){animation-delay:.05s}
+.reveal:nth-child(2){animation-delay:.16s}
+.reveal:nth-child(3){animation-delay:.27s}
+.reveal:nth-child(4){animation-delay:.38s}
+.photo.reveal{animation-delay:.2s;animation-duration:1.2s}
+@keyframes rise{to{opacity:1;transform:none}}
+dialog.modal[open]{animation:pop .32s cubic-bezier(.22,.7,.3,1)}
+@keyframes pop{from{opacity:0;transform:translateY(12px) scale(.985)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .reveal,dialog.modal[open]{animation:none;opacity:1;transform:none}
+  *{transition-duration:.01ms!important}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:880px){
+  .hero{grid-template-columns:1fr;align-items:start;padding-block:2rem 3.5rem;gap:2.25rem}
+  .photo{aspect-ratio:4/4.2;border-radius:150px 150px 14px 14px;max-height:58vh}
+  .about{grid-template-columns:1fr;gap:1.25rem}
+  .care-grid{grid-template-columns:1fr;gap:1.75rem}
+}
+@media (max-width:520px){
+  .row{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:.6rem}
+  dialog.modal{width:100%}
+  .modal-card{border-radius:18px}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="nav">
+    <a class="mark" href="#top">coco <em>doula</em></a>
+    <button class="nav-link" type="button" data-open-form>Book a call</button>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">Birth Doula &nbsp;&middot;&nbsp; Austin, Texas</span>
+      <h1 class="reveal">Someone who <em>stays.</em></h1>
+      <p class="lede reveal">Steady, unhurried support through pregnancy, birth, and the tender first weeks at home.</p>
+      <div class="hero-actions reveal">
+        <button class="btn" type="button" data-open-form>Reserve your date</button>
+      </div>
+    </div>
+
+    <figure class="photo reveal" id="photo">
+      <img src="assets/coco.jpg" alt="Coco holding her child on the beach at golden hour" onload="this.parentNode.classList.add('has-image')" onerror="this.remove()">
+      <figcaption class="photo-hint">Photo<br>assets/coco.jpg</figcaption>
+    </figure>
+  </header>
+</div>
+
+<div class="wrap"><hr class="rule"></div>
+
+<div class="wrap">
+  <section class="about">
+    <span class="eyebrow">About</span>
+    <div class="about-body">
+      <h2>Birth asks a lot of you. You should not go through it alone.</h2>
+      <p>I’m Coco, a trained birth doula in Austin, Texas, and a mother of four. Birth can be exciting, emotional, and full of unknowns, all at once. <strong>More than anything, I see my role as an advocate for mothers during some of their most vulnerable moments.</strong></p>
+      <p>Every birth is different. My job is to know you, your hopes, and your preferences well enough that when the day comes, we step into it together - not as strangers to the moment, but as a team that already knows what matters.</p>
+      <p class="signature">Coco</p>
+    </div>
+  </section>
+</div>
+
+<section class="care">
+  <div class="wrap">
+    <span class="eyebrow">How the care works</span>
+    <div class="care-grid">
+      <article class="phase">
+        <h3>Before</h3>
+        <p>Prenatal visits in your home. We build your preferences, talk through what you want and what you are afraid of, and practice comfort measures with your partner so they know exactly what to do.</p>
+      </article>
+      <article class="phase">
+        <h3>During</h3>
+        <p>On call from 37 weeks. I come when you want me and I stay until after the baby is born. Continuous physical comfort, steady information, and a voice in the room that is only yours.</p>
+      </article>
+      <article class="phase">
+        <h3>After</h3>
+        <p>A postpartum visit in the first week and open texts beyond it. Feeding, healing, sleep, and the honest conversation about how you are actually doing.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="book">
+  <div class="wrap book-inner">
+    <span class="eyebrow">Reserve your date</span>
+    <h2>Tell me when you are due.</h2>
+    <p>Send over your details and I will reach out within a day to set up a free call. No pressure, no obligation. We will see if we are a fit.</p>
+    <button class="btn btn-light" type="button" data-open-form>Start with a free call</button>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer>
+    <p class="fine">Coco Doula &nbsp;&middot;&nbsp; Birth Doula &nbsp;&middot;&nbsp; Austin, Texas &nbsp;&middot;&nbsp; &copy; 2026</p>
+  </footer>
+</div>
+
+<dialog class="modal" id="bookModal" aria-labelledby="modalTitle">
+  <div class="modal-card" id="formwrap">
+    <button class="modal-close" type="button" data-close-form aria-label="Close">&#10005;</button>
+
+    <div class="modal-head">
+      <span class="eyebrow">Reserve your date</span>
+      <h2 id="modalTitle">Tell me when you are due.</h2>
+    </div>
+
+    <form id="booking" novalidate>
+      <div class="field">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" autocomplete="name" placeholder="First and last" required>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@email.com" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 555-5555" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="due">Baby's due date</label>
+        <input id="due" name="due_date" type="date" required>
+      </div>
+      <p class="consent">I will only use this to get in touch about your birth. Nothing else, ever.</p>
+      <button class="btn btn-light" type="submit">Send it over</button>
+    </form>
+
+    <div class="sent" id="sent" role="status">
+      <h3>Got it.</h3>
+      <p>Thank you for trusting me with this. I will be in touch within a day to find a time to talk.</p>
+      <button class="btn btn-light" type="button" data-close-form>Close</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+// Replace with the live form endpoint before launch (Formspree, Cloudflare Worker, etc.)
+var FORM_ENDPOINT = "";
+
+var modal = document.getElementById("bookModal");
+var wrap = document.getElementById("formwrap");
+var form = document.getElementById("booking");
+
+document.querySelectorAll("[data-open-form]").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    modal.showModal();
+    if (!wrap.classList.contains("is-sent")) document.getElementById("name").focus();
+  });
+});
+
+document.querySelectorAll("[data-close-form]").forEach(function (btn) {
+  btn.addEventListener("click", function () { modal.close(); });
+});
+
+// click the backdrop to close
+modal.addEventListener("click", function (e) {
+  if (e.target === modal) modal.close();
+});
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  if (!form.reportValidity()) return;
+
+  var show = function () { wrap.classList.add("is-sent"); };
+
+  if (!FORM_ENDPOINT) { show(); return; }
+
+  fetch(FORM_ENDPOINT, {
+    method: "POST",
+    headers: { Accept: "application/json" },
+    body: new FormData(form)
+  }).then(show).catch(show);
+});
+</script>
+
+</body>
+</html>
