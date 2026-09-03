@@ -148,6 +148,17 @@ a{color:inherit}
   gap:clamp(1.5rem,5vw,4.5rem);
   padding-block:clamp(3.5rem,8vw,6rem);
 }
+.about-aside{display:flex;flex-direction:column;gap:1.9rem;align-items:flex-start}
+.portrait{
+  position:relative;margin:0;width:100%;max-width:270px;
+  border-radius:10px;overflow:hidden;background:var(--sand);
+  box-shadow:0 22px 45px -32px rgba(59,50,43,.6);
+}
+.portrait img{width:100%;aspect-ratio:1;object-fit:cover}
+.portrait::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;
+  box-shadow:inset 0 0 0 1px rgba(59,50,43,.1);pointer-events:none;
+}
 .about-body{display:flex;flex-direction:column;gap:1.5rem;max-width:var(--measure)}
 .about h2{font-size:clamp(1.85rem,3.4vw,2.6rem)}
 .about p{color:var(--bark-soft)}
@@ -256,6 +267,8 @@ dialog.modal[open]{animation:pop .32s cubic-bezier(.22,.7,.3,1)}
   .hero{grid-template-columns:1fr;align-items:start;padding-block:2rem 3.5rem;gap:2.25rem}
   .photo{aspect-ratio:4/4.2;border-radius:150px 150px 14px 14px;max-height:58vh}
   .about{grid-template-columns:1fr;gap:1.25rem}
+  .about-aside{gap:1.4rem}
+  .portrait{max-width:190px}
   .care-grid{grid-template-columns:1fr;gap:1.75rem}
 }
 @media (max-width:520px){
@@ -295,7 +308,12 @@ dialog.modal[open]{animation:pop .32s cubic-bezier(.22,.7,.3,1)}
 
 <div class="wrap">
   <section class="about">
-    <span class="eyebrow">About</span>
+    <div class="about-aside">
+      <span class="eyebrow">About</span>
+      <figure class="portrait">
+        <img src="assets/coco-portrait.jpg" alt="Coco, birth doula in Austin, Texas" width="760" height="760" loading="lazy">
+      </figure>
+    </div>
     <div class="about-body">
       <h2>Birth asks a lot of you. You should not go through it alone.</h2>
       <p>I’m Coco, a trained birth doula in Austin, Texas, and a mother of four. Birth can be exciting, emotional, and full of unknowns, all at once. <strong>More than anything, I see my role as an advocate for mothers during some of their most vulnerable moments.</strong></p>
