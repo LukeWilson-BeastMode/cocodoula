@@ -398,7 +398,7 @@ dialog.modal[open]{animation:pop .32s cubic-bezier(.22,.7,.3,1)}
 </dialog>
 
 <script>
-// Replace with the live form endpoint before launch (Formspree, Cloudflare Worker, etc.)
+// Google Apps Script web app URL (see apps-script/Code.gs). Ends in /exec.
 var FORM_ENDPOINT = "";
 
 var modal = document.getElementById("bookModal");
@@ -431,8 +431,9 @@ form.addEventListener("submit", function (e) {
 
   fetch(FORM_ENDPOINT, {
     method: "POST",
-    headers: { Accept: "application/json" },
-    body: new FormData(form)
+    mode: "no-cors",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(new FormData(form)).toString()
   }).then(show).catch(show);
 });
 </script>
